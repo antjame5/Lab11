@@ -53,7 +53,7 @@ public class Lab11Prob02 {
 				DataOutputStream output = new DataOutputStream(new FileOutputStream("src/people-salary-sorted.dat"));) {
 
 			for (Person p : personList) {
-				System.out.println(p);
+				System.out.print(p + " ");
 				output.writeUTF(p.toString());
 			}
 		} catch (Exception ex) {
@@ -140,7 +140,7 @@ class Person implements Comparable<Person> {
 
 	@Override
 	public String toString() {
-		return String.format("%d %s %s %d $%,.2f%n", getAge(), getName(), getAddress(), getZipCode(), getSalary());
+		return String.format("%d %s %s %d $%,.2f", getAge(), getName(), getAddress(), getZipCode(), getSalary());
 	}
 
 }
